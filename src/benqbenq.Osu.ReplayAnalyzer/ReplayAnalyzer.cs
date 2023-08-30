@@ -59,6 +59,15 @@ public static class ReplayAnalyzer
         return new ReplayStats(negHitErrorsAvg, posHitErrorsAvg, unstableRate);
     }
 
+    /// <summary>
+    /// Calculates real OverallDifficulty based on beatmap OverallDifficulty and mods combination/>.
+    /// </summary>
+    /// <param name="od">Beatmap's OverallDifficulty.</param>
+    /// <param name="mods">Mods used.</param>
+    /// <returns>Real OverallDifficulty.</returns>
+    /// <exception cref="ArgumentException">
+    /// Thrown when given mods are'nt supported.
+    /// </exception>
     static double CalculateRealOd(double od, Mods mods)
     {
         var odModsMask = Mods.None | Mods.DoubleTime | Mods.HalfTime | Mods.HardRock | Mods.Easy;
@@ -79,6 +88,11 @@ public static class ReplayAnalyzer
     }
 
     /// <summary>
+    /// Calculates objects circle radius based on the beatmap CircleSize and mods combination.
+    /// </summary>
+    /// <param name="cs">Beatmap's CircleSize.</param>
+    /// <param name="mods">Mods used.</param>
+    /// <returns>Radius measured in osu!pixels.</returns>
     static double CalculateObjectsRadius(double cs, Mods mods)
     {
         var csModsMask = Mods.Easy | Mods.HardRock;
@@ -91,14 +105,34 @@ public static class ReplayAnalyzer
             };
     }
 
+    /// <summary>
+    /// Determines if the cursor of the given <paramref name="frame"/> is 
+    /// within circle's radius <paramref name="r"/> of the given <paramref name="obj"/>.
+    /// </summary>
+    /// <param name="obj">Beatmap's object.</param>
+    /// <param name="frame">Replay's frame.</param>
+    /// <param name="r">Circle radius.</param>
+    /// <returns></returns>
     static bool IsOnCircle(HitObject obj, ReplayFrame frame, double r) =>
         Math.Pow(obj.Coords.X - frame.Coords.X, 2) +
         Math.Pow(obj.Coords.Y - frame.Coords.Y, 2) <= Math.Pow(r, 2);
 
     /// <summary>
+    /// Determines if any new key is pressed compared to the previous frame input.
+    /// </summary>
+    /// <param name="curr">Current frame inputs.</param>
+    /// <param name="prev">Previous frame inputs.</param>
+    /// <returns><see langword="true"/> if any new key was pressed.</returns>
     static bool IsNewKeyPressed(Inputs curr, Inputs prev) =>
         curr.HasAnyNewInput(prev) && curr != Inputs.None;
 
+    /// <summary>
+    /// Determines if the given replay frame is within object's hit-window.
+    /// </summary>
+    /// <param name="obj">Beatmap object.</param>
+    /// <param name="frame">Replay frame.</param>
+    /// <param name="border">Hit-window border's absolute value.</param>
+    /// <returns><see langword="true"/> if frame is in hit-window.</returns>
     static bool IsInHitWindow(HitObject obj, ReplayFrame frame, double border) =>
         (obj.Ticks - border) <= frame.Ticks &&
         frame.Ticks <= (obj.Ticks + border);
