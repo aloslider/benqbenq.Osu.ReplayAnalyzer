@@ -100,6 +100,6 @@ public static class ReplayAnalyzer
         curr.HasAnyNewInput(prev) && curr != Inputs.None;
 
     static bool IsInHitWindow(HitObject obj, ReplayFrame frame, double border) =>
-        (obj.Ticks - border) < frame.Ticks &&
-        frame.Ticks < (obj.Ticks + border);
+        (obj.Ticks - border) <= frame.Ticks &&
+        frame.Ticks <= (obj.Ticks + border);
 }
