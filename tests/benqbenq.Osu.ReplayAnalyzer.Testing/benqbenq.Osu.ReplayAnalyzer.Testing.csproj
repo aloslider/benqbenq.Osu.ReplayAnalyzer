@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<Content Include="..\benqbenq.Osu.ReplayAnalyzer.Testing\replays\*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="..\benqbenq.Osu.ReplayAnalyzer.Testing\beatmaps\*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="beatmaps\BLANKFIELD - Retrospective City (Lasse) [Extreme].osu" />
+	  <None Remove="beatmaps\cosMo@bousouP feat. Hatsune Miku, GUMI - Monochrome Voice (rollpan) [Anti the OJT HOLIC].osu" />
+	  <None Remove="beatmaps\Horie Yui - silky heart (Neoskylove) [Taeyang's Insane].osu" />
+	  <None Remove="beatmaps\Misae Takamatsu (Sakura Sakura) - HEART MOVING (EijiKuinbii) [Yume].osu" />
+	  <None Remove="beatmaps\Ray - a-gain (Del05) [Normal].osu" />
+	  <None Remove="beatmaps\System Of A Down - Vicinity Of Obscenity (-Kemsyt) [Isomir's Extreme].osu" />
+	  <None Remove="beatmaps\Various Artist - Long Stream Practice Maps (onlyforyou) [AXION BPM160].osu" />
+	  <None Remove="beatmaps\zts - liberatedliberator (deetz) [Dada's Insane].osu" />
+	  <None Remove="replays\ - Horie Yui - silky heart [Taeyang's Insane] (2022-08-20) Osu.osr" />
+	  <None Remove="replays\ - Ray - a-gain [Normal] (2023-08-29) Osu.osr" />
+	  <None Remove="replays\ - System Of A Down - Vicinity Of Obscenity [Isomir's Extreme] (2023-08-25) Osu.osr" />
+	  <None Remove="replays\alo slider - BLANKFIELD - Retrospective City [Extreme] (2021-07-19) Osu.osr" />
+	  <None Remove="replays\alo slider - cosMo@bousouP feat. Hatsune Miku, GUMI - Monochrome Voice [Anti the OJT HOLIC] (2022-02-17) Osu-1.osr" />
+	  <None Remove="replays\alo slider - Misae Takamatsu (Sakura Sakura) - HEART MOVING [Yume] (2021-04-13) Osu.osr" />
+	  <None Remove="replays\alo slider - Various Artist - Long Stream Practice Maps [AXION BPM160] (2020-07-07) Osu.osr" />
+	  <None Remove="replays\alo slider - zts - liberatedliberator [Dada's Insane] (2022-02-10) Osu.osr" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="beatmaps\BLANKFIELD - Retrospective City (Lasse) [Extreme].osu" />
+	  <Content Include="beatmaps\cosMo@bousouP feat. Hatsune Miku, GUMI - Monochrome Voice (rollpan) [Anti the OJT HOLIC].osu" />
+	  <Content Include="beatmaps\Horie Yui - silky heart (Neoskylove) [Taeyang's Insane].osu" />
+	  <Content Include="beatmaps\Misae Takamatsu (Sakura Sakura) - HEART MOVING (EijiKuinbii) [Yume].osu" />
+	  <Content Include="beatmaps\Ray - a-gain (Del05) [Normal].osu" />
+	  <Content Include="beatmaps\System Of A Down - Vicinity Of Obscenity (-Kemsyt) [Isomir's Extreme].osu" />
+	  <Content Include="beatmaps\Various Artist - Long Stream Practice Maps (onlyforyou) [AXION BPM160].osu" />
+	  <Content Include="beatmaps\zts - liberatedliberator (deetz) [Dada's Insane].osu" />
+	  <Content Include="replays\ - Horie Yui - silky heart [Taeyang's Insane] (2022-08-20) Osu.osr" />
+	  <Content Include="replays\ - Ray - a-gain [Normal] (2023-08-29) Osu.osr" />
+	  <Content Include="replays\ - System Of A Down - Vicinity Of Obscenity [Isomir's Extreme] (2023-08-25) Osu.osr" />
+	  <Content Include="replays\alo slider - BLANKFIELD - Retrospective City [Extreme] (2021-07-19) Osu.osr" />
+	  <Content Include="replays\alo slider - cosMo@bousouP feat. Hatsune Miku, GUMI - Monochrome Voice [Anti the OJT HOLIC] (2022-02-17) Osu-1.osr" />
+	  <Content Include="replays\alo slider - Misae Takamatsu (Sakura Sakura) - HEART MOVING [Yume] (2021-04-13) Osu.osr" />
+	  <Content Include="replays\alo slider - Various Artist - Long Stream Practice Maps [AXION BPM160] (2020-07-07) Osu.osr" />
+	  <Content Include="replays\alo slider - zts - liberatedliberator [Dada's Insane] (2022-02-10) Osu.osr" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\src\benqbenq.Osu.ReplayAnalyzer.BeatmapParser\benqbenq.Osu.ReplayAnalyzer.BeatmapParser.csproj" />
+	  <ProjectReference Include="..\..\src\benqbenq.Osu.ReplayAnalyzer.ReplayParser\benqbenq.Osu.ReplayAnalyzer.ReplayParser.csproj" />
+	  <ProjectReference Include="..\..\src\benqbenq.Osu.ReplayAnalyzer\benqbenq.Osu.ReplayAnalyzer.csproj" />
+	</ItemGroup>
+</Project>

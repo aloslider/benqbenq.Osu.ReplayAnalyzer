@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5820C6FE-25ED-4EA0-B3EE-0A582D3DCC39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7AE8A3A7-0EA7-4BF2-8089-8121CEECED23}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "benqbenq.Osu.ReplayAnalyzer.Testing", "tests\benqbenq.Osu.ReplayAnalyzer.Testing\benqbenq.Osu.ReplayAnalyzer.Testing.csproj", "{4A8DF907-BC80-440F-8F3A-3C98B9551128}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "benqbenq.Osu.ReplayAnalyzer.ReplayParser", "src\benqbenq.Osu.ReplayAnalyzer.ReplayParser\benqbenq.Osu.ReplayAnalyzer.ReplayParser.csproj", "{D100BA26-63B9-4806-96DA-922F90B0DBBA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "benqbenq.Osu.ReplayAnalyzer.BeatmapParser", "src\benqbenq.Osu.ReplayAnalyzer.BeatmapParser\benqbenq.Osu.ReplayAnalyzer.BeatmapParser.csproj", "{B80E2B94-1CA8-4488-88BD-83D7E03916FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "benqbenq.Osu.ReplayAnalyzer", "src\benqbenq.Osu.ReplayAnalyzer\benqbenq.Osu.ReplayAnalyzer.csproj", "{D65B3255-77D7-494F-A7FA-14E4AAF9D574}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A8DF907-BC80-440F-8F3A-3C98B9551128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A8DF907-BC80-440F-8F3A-3C98B9551128}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A8DF907-BC80-440F-8F3A-3C98B9551128}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A8DF907-BC80-440F-8F3A-3C98B9551128}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D100BA26-63B9-4806-96DA-922F90B0DBBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D100BA26-63B9-4806-96DA-922F90B0DBBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D100BA26-63B9-4806-96DA-922F90B0DBBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D100BA26-63B9-4806-96DA-922F90B0DBBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B80E2B94-1CA8-4488-88BD-83D7E03916FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B80E2B94-1CA8-4488-88BD-83D7E03916FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B80E2B94-1CA8-4488-88BD-83D7E03916FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B80E2B94-1CA8-4488-88BD-83D7E03916FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D65B3255-77D7-494F-A7FA-14E4AAF9D574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D65B3255-77D7-494F-A7FA-14E4AAF9D574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D65B3255-77D7-494F-A7FA-14E4AAF9D574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D65B3255-77D7-494F-A7FA-14E4AAF9D574}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A8DF907-BC80-440F-8F3A-3C98B9551128} = {7AE8A3A7-0EA7-4BF2-8089-8121CEECED23}
+		{D100BA26-63B9-4806-96DA-922F90B0DBBA} = {5820C6FE-25ED-4EA0-B3EE-0A582D3DCC39}
+		{B80E2B94-1CA8-4488-88BD-83D7E03916FD} = {5820C6FE-25ED-4EA0-B3EE-0A582D3DCC39}
+		{D65B3255-77D7-494F-A7FA-14E4AAF9D574} = {5820C6FE-25ED-4EA0-B3EE-0A582D3DCC39}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86E58558-5168-4E6D-8456-8C73DE6F9BB1}
+	EndGlobalSection
+EndGlobal
