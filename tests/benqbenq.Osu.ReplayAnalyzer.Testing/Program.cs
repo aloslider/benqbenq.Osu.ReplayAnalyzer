@@ -1,4 +1,4 @@
-﻿using benqbenq.Osu.ReplayAnalyzer;
+using benqbenq.Osu.ReplayAnalyzer;
 using benqbenq.Osu.ReplayAnalyzer.BeatmapParser;
 using benqbenq.Osu.ReplayAnalyzer.BeatmapParser.Models;
 using benqbenq.Osu.ReplayAnalyzer.ReplayParser;
@@ -42,7 +42,7 @@ Console.ReadKey();
 
 static void CalculateStatistics(BeatmapInfo beatmap, ReplayInfo replay)
 {
-    var stats = ReplayAnalyzer.GetStats(beatmap, replay);
+    var stats = ReplayAnalyzer.CalculateHitErrorsStats(beatmap, replay);
 
     Console.WriteLine($"""
         NegHitErrorAvg:   {stats.NegativeHitErrorAvg}
