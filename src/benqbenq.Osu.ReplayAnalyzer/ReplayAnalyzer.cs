@@ -25,7 +25,7 @@ public static class ReplayAnalyzer
             HitObject obj = beatmap.HitObjects[objIndex];
             ReplayFrame frame = replay.Frames[frameIndex];
             Inputs currInput = frame.Inputs;
-            double rightWindowBorder = obj.Ticks + hitMissWindow;
+            double rightWindowBorder = obj.Ticks + hit50Window;
 
             // If somehow frame is after object hiwWindow, skip to the next obj
             if (frame.Ticks > rightWindowBorder)
