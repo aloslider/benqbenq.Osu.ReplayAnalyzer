@@ -6,16 +6,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-	<ItemGroup>
-		<Content Include="..\benqbenq.Osu.ReplayAnalyzer.Testing\replays\*">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</Content>
-		<Content Include="..\benqbenq.Osu.ReplayAnalyzer.Testing\beatmaps\*">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</Content>
-	</ItemGroup>
-
 	<ItemGroup>
 	  <ProjectReference Include="..\..\src\benqbenq.Osu.ReplayAnalyzer.BeatmapParser\benqbenq.Osu.ReplayAnalyzer.BeatmapParser.csproj" />
 	  <ProjectReference Include="..\..\src\benqbenq.Osu.ReplayAnalyzer.ReplayParser\benqbenq.Osu.ReplayAnalyzer.ReplayParser.csproj" />
